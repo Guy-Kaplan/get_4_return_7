@@ -17,12 +17,14 @@ def get_4_return_7_plus(num: int) -> int:
 
 def get_4_return_7_replace(num: int) -> int:
 	# NO if is allowed & any math operator (+,-,*,/,//)
+	# 4 (100 in binary) will become 7 (111 in binary)
 	num_in_binary_str = str("{0:b}".format(num))  # decimal -> binary
 	new_num = num_in_binary_str.replace('0', '1')  # turn all bits on (to 1)
 	return int(new_num, 2)  # binary -> decimal
 
 def get_4_return_7_or(num: int) -> int:
 	# NO if is allowed & any math operator (+,-,*,/,//)
+	# 4 (100 in binary) will become 7 (111 in binary)
 	num_in_binary = int("{0:b}".format(num))  # decimal -> binary
 	new_num_str = str(num_in_binary | 111)  # turn bits on (to 1)
 	return int(new_num_str, 2)  # binary -> decimal
